@@ -18,7 +18,7 @@ public class Selenide2Tests {
     }
 
     @Test
-    @DisplayName("hover на странице Github")
+    @DisplayName("hover РЅР° СЃС‚СЂР°РЅРёС†Рµ Github")
     void hoverOnGithub() {
         open("https://github.com/");
         $(byText("Solutions")).hover();
@@ -27,16 +27,16 @@ public class Selenide2Tests {
     }
 
     @Test
-    @DisplayName("Drag and Drop работает")
+    @DisplayName("Drag and Drop СЂР°Р±РѕС‚Р°РµС‚")
     void dragAndDrop() {
         open("https://the-internet.herokuapp.com/drag_and_drop");
         $("#column-a").dragAndDropTo("#column-b");
         $("#column-a").shouldHave(text("B"));
-        $("#column-b").shouldHave(text("A"));;
+        $("#column-b").shouldHave(text("A"));
     }
 
     @Test
-    @Disabled("это не работает")
+    @Disabled("СЌС‚Рѕ РЅРµ СЂР°Р±РѕС‚Р°РµС‚")
     void anotherDragAndDrop() {
         open("https://the-internet.herokuapp.com/drag_and_drop");
         actions().dragAndDrop($("#column-a"), $("#column-b")).perform();
@@ -45,7 +45,7 @@ public class Selenide2Tests {
     }
 
     @Test
-    @Disabled("это тоже не работает")
+    @Disabled("СЌС‚Рѕ С‚РѕР¶Рµ РЅРµ СЂР°Р±РѕС‚Р°РµС‚")
     void offsetDragAndDrop() {
         open("https://the-internet.herokuapp.com/drag_and_drop");
         SelenideElement element = $("#column-a");
